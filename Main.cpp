@@ -21,23 +21,51 @@ int principal[I][I] =
 };
 
 int templet[I][I];
-int gameType, menu, error = 1, line, column, stay, chances, remaining;
+int gameType, menu, error = 1, line, column, chances, remaining, dificulty;
+bool stay = true;
 
 int main() {
 
+    setlocale(LC_ALL, "portuguese");
     srand(time(NULL));
-
-    gameType = rand() % 4 + 1;
 
     cout << "Tipo =" << gameType << endl;
+    system("cls");
     Sleep(1000);
     srand(time(NULL));
-    cout << "SUDOKU";
-    cout << "1 - Jogar";
-    cout << "2 - Dificuldade";
-    cout << "3 - Sobre";
-    cout << "4 - Fim";
-    system("pause");
-    cin >> menu;
-    system("cls");
+    while (stay) {
+
+        gameType = rand() % 4 + 1;
+
+        cout << "SUDOKU\n";
+        cout << "1 - Jogar\n";
+        cout << "2 - Dificuldade\n";
+        cout << "3 - Sobre\n";
+        cout << "4 - Fim\n";
+        system("pause");
+        cin >> menu;
+        system("cls");
+
+        switch (menu) {
+        case 1:
+
+            break;
+        case 2:
+            cout << "Escolha a dificuldade \n";
+            cout << "1 - Facil \n";
+            cout << "2 - Medio \n";
+            cout << "3 - Dificil \n";
+            cin >> dificulty;
+            break;
+        case 3:
+
+            cout << "Developed by Nathan Jose Rezini at Jun/21";
+            break;
+        case 4:
+            stay = false;
+            break;
+        default:
+
+        }
+    }
 }
