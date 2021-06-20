@@ -20,16 +20,16 @@ int principal[I][I] =
     8,7,9,3,2,1,5,4,6 
 };
 
-int gabarito[I][I];
-int tipo, menu, mais = 0, d, erro = 1, linha, coluna, fica, chances, L, C, falta;
+int templet[I][I];
+int gameType, menu, error = 1, line, column, stay, chances, remaining;
 
 int main() {
 
     srand(time(NULL));
 
-    tipo = rand() % 4 + 1;
+    gameType = rand() % 4 + 1;
 
-    cout << "Tipo =" << tipo << endl;
+    cout << "Tipo =" << gameType << endl;
     Sleep(1000);
     srand(time(NULL));
     cout << "SUDOKU";
@@ -37,4 +37,7 @@ int main() {
     cout << "2 - Dificuldade";
     cout << "3 - Sobre";
     cout << "4 - Fim";
+    system("pause");
+    cin >> menu;
+    system("cls");
 }
